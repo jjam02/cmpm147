@@ -55,3 +55,26 @@ body.is-fullscreen #canvas-container {
   margin: 0; /* Remove any default margins */
   z-index: 1000; /* Ensure it's above other content */
 }
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#news-container {
+  width: 100vw; /* Set width to match viewport width */
+  overflow-x: hidden; /* Clip content that overflows the left edge */
+}
+
+.news-story {
+  display: inline-block;
+  padding: 10px;
+  margin-right: 20px;
+  white-space: nowrap; /* Prevent wrapping */
+  animation: scroll 20s linear infinite; /* Adjust duration as needed */
+}
